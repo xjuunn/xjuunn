@@ -1,0 +1,273 @@
+# net.minecraft
+
+- advancements 进度
+    - critereon 标准
+- client 客户端
+    - animation 动画
+        - definitions 定义
+    - color 颜色
+        - block 方块
+        - item 物品
+    - gui 界面
+        - chat 聊天
+        - components 组件
+            - events 事件
+            - spectator 旁观者
+            - toasts 土司消息
+        - font 字体
+            - glyphs 火星文
+            - providers 提供者
+        - narration 故事
+        - screens 屏幕
+            - achievement 成就
+            - advancements 进度
+            - controls 控制
+            - debug 调试
+            - inventory 物品清单
+                - tooltip 工具提示
+            - multiplayer 多人
+            - packs 背包
+            - recipebook 配方书
+            - reporting 报告
+            - social 社交
+            - worldselection 世界选择
+        - spectator 旁观者
+            - categories 种类
+    - main 主
+    - model 模型
+        - dragon 末影龙
+        - geom 几何
+            - builders 构造器
+    - multiplayer 多人
+        - chat 聊天
+            - report 报道
+        - prediction 预报
+        - resolver 分析
+    - particle 粒子效果
+    - player 玩家
+        - inventory 物品清单
+    - profilling 分析
+    - renderer 渲染器
+        - block 方块
+            - model 模型
+                - multipart 几何部分
+        - blockentity 方块实体
+        - chunk 区块
+        - culling 挑选
+        - debug 调试
+        - entity 实体
+            - layers 皮肤
+            - player 玩家
+        - item 物品
+        - texture 纹理
+    - resources 资源
+        - language 语言
+        - metadata 元数据
+            - animation 动画
+            - language 语言
+            - texture 纹理
+        - model 模型
+        - sounds 声音
+    - searcheree 索树
+    - server 服务
+    - sounds 声音
+    - tutorial 指导
+- commands 指令
+    - arguments 命令行参数
+        - blocks 方块
+        - coordinates 坐标
+        - item 物品
+        - selector 选择器
+            - options 设置
+    - synchronization 同步
+        - brigadier 旅长
+- core 核心
+    - cauldron 大锅
+    - dispenser 分配器
+    - particles 粒子
+- data 数据
+    - advancements 进度
+    - info 信息
+    - loot 战利品
+    - models 模型
+        - blockstates 方块状态
+        - model 模型
+    - recipes 配方
+    - structures 结构
+    - tags 标签
+    - worldgen 世界生成
+        - biome 生物群系
+        - features 特征
+        - placement 布置
+- gametest 游戏测试
+    - framework 框架
+- locale 区域
+- nbt nbt数据
+    - visitors 访客
+- network 网络
+    - chat 聊天
+        - contents 内容
+    - protocol 协议
+        - game 游戏
+        - handshake 信号交换
+        - login 登录
+        - status 状态
+    - syncher
+- obfuscate 使模糊
+- realms 领域服
+- recipebook 配方书
+- resources 资源
+- server 服务器
+    - bossenents Boss事件
+    - chase 追逐
+    - commands 命令
+        - data 数据
+    - dedicated 专用
+    - gui 界面
+    - level 等级
+        - progress 进度
+    - network 网络
+    - packs 背包
+        - metadata 元数据
+            - pack 包
+        - repository 物品清单
+        - resources 资源
+    - players 玩家
+    - rcon
+        - thread 线程
+- sounds 声音
+- stats 统计
+- tags 标签
+- util 工具
+    - datafix 数据维护
+        - fixes 修理
+        - schemas 计划
+    - monitoring 监听
+        - jmx 管理扩展
+    - profiling 分析
+        - jfr
+            - callback 回调
+            - event 事件
+            - parse 解析
+            - serialize 序列化
+            - stats 状态
+        - metrics 性能指标
+            - profiling 分析
+            - storage 储存
+    - random 随机
+    - thread 线程
+    - valueproviders 值提供者
+    - worldupdate 世界更新
+- world 世界
+    - damagesource 伤害来源
+    - effect 效果
+    - entity 实体
+        - ai 实体智能
+            - attributes 属性
+            - behavior 行为
+                - warden 循声守卫
+            - control 控制
+            - goal 目标
+                - target 目标
+            - gossip 聊天
+            - memory 记忆
+            - navigation 航行
+            - sensing 检测
+            - targeting 选择目标
+            - util 工具
+            - village 村民
+                - poi
+        - ambient 环境音
+        - animal 动物
+            - allay 轻灵
+            - axolotl 美西螈
+            - frog 青蛙
+            - goat 山羊
+            - horse 马
+        - boss Boss
+            - enderdragon 末影龙
+                - phases 阶段
+            - witrher 凋零
+        - decoration 装饰
+        - item 物品
+        - monster 怪物
+            - hoglin 疣猪兽
+            - piglin 猪灵
+            - warden 循声守卫
+        - npc NPC
+        - player 玩家
+        - projectile 弹射物
+        - raid 袭击
+        - schedule 时间表
+        - vehicle 交通工具
+    - food 食物
+    - inentory 物品清单
+        - tooltip 工具提示
+    - item 物品
+        - alchemy 药水效果
+        - context 内容
+        - crafting  制作
+        - enchantment 附魔
+        - trading 交易
+    - level 等级
+        - biome 生物群系
+        - block 方块
+            - entity 实体
+            - grower 耕种者
+            - piston 活塞
+            - state 状态
+                - pattern 模式
+                - predicate 属性
+        - border 边界
+        - chunk 区块
+            - storage 储存
+        - dimension 维度
+            - end 末地
+        - entity 实体
+        - gameenent 游戏事件
+            - vibrations 震动
+        - levelgen 级别
+            - blending 混合
+            - blockpredicates 方块谓词
+            - carver 洞穴
+            - feature 个性化
+                - configurations 配置
+                - featuresize 个性化大小
+                - foliageplacers
+                - rootpalcers 根
+                - stateproviders
+                - treedecorators
+                - trunkplacers
+            - flat 超平坦
+            - heightproviders 巨大化
+            - material 材料
+            - placement 放置
+            - presets 事先调整
+            - structure 结构
+                - pieces 片
+                - placement 放置
+                - pools 水池
+                - structures 结构
+                - templatesystem 模板系统
+            - synth 合成器
+        - lighting 光照
+        - material 材料
+        - pathfinder 探路者
+        - portal 传送门
+        - redstone 红石
+        - saveddata 保存数据
+            - map 地图
+        - storage 储存
+            - loot 战利品
+                - entries 随机池
+                - functions 函数
+                - parameters 参数
+                - predicates 谓词
+                - providers 提供者
+                    - nbt nbt数据
+                    - number 数量
+                    - score 分数
+        - timers 计时器
+    - phys 物理
+    - scores 分数
+    - ticks 时刻
