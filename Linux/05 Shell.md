@@ -77,7 +77,170 @@ read # 让用户输入
 read -p "输入用户名" # 用户输入前提示用户
 ~~~
 
+## 表达式
 
+#### 算术表达式
 
-@todo
+用户执行数学运算
+
+~~~ shell
+# 使用$(( )) 语法
+echo $((3 + 5))
+echo $((10 - 2))
+# 使用 let 命令
+let "result = 5 + 3"
+echo $result
+# 使用 expr 命令
+expr 5 + 3
+~~~
+
+#### 条件表达式
+
+测试条件是否成立
+
+~~~ shell
+test 5 = 5
+echo $? # 0 ，$?输出上一句是否执行成功，0表示成功
+test 5 = 6
+echo $? # 1 ，1表示失败
+[ 9 = 9 ] # 使用[]来进行测试
+echo $? # 0
+# 使用[[ ]]，进行测试，支持模式匹配和逻辑运算
+[[ 5 -gt 3 && 3 -lt 10 ]]
+~~~
+
+> [!caution]
+>
+> 等号和运算符前后必须要有空格
+>
+> 使用[ ]进行判断时，[ ]内的开头和结尾也要有空格
+
+### 数值比较运算符
+
+| 运算符 | 规则说明                                |
+| ------ | --------------------------------------- |
+| -gt    | 左边是否大于右边 > (greater than)       |
+| -lt    | 左边是否小于右边 < (less than)          |
+| -eq    | 是否相等 == (equal)                     |
+| -ne    | 是否不等 != (not equal)                 |
+| -ge    | 是否大于等于 >= (greater than or equal) |
+| -le    | 是否小于等于 <= (less than or equal )   |
+
+## 流程控制
+
+### 分支结构
+
+####  if
+
+~~~ shell
+if [ 条件 ]; then
+
+elif [ 条件 ]; then
+
+else 
+
+fi
+~~~
+
+eg
+
+~~~ shell
+read -p "请输入年龄：" age
+if [ $age -lt 18 ]; then
+	echo "未成年"
+elif [ $age -ge 18 ] && [ $age -lt 60 ]; then
+	echo "成年人"
+else 
+	echo "老年人"
+fi
+~~~
+
+#### case
+
+~~~ shell
+case 变量 in
+	模式1)
+		# 匹配模式1时执行命令
+		;;
+	模式2)
+		# 匹配模式2时执行命令
+		;;
+	*)
+		#匹配模式3时执行命令
+		;;
+esac
+~~~
+
+eg
+
+~~~ shell
+read -p "输入水果名称" fruit
+case $fruit in
+	apple)
+		echo "苹果"
+		;;
+	banana|orange)
+		echo "香蕉或橘子"
+		;;
+	*)
+		echo "未知水果"
+		;;
+~~~
+
+#### select 菜单选择
+
+~~~ shell
+select 变量 in 列表; do
+	# 选择处理
+	break;
+done
+~~~
+
+eg
+
+~~~ shell
+#!/bin/bash
+PS3="请选择您喜欢的水果: "
+select fruit in apple banana orange quit; do
+    case $fruit in
+        quit)
+            break
+            ;;
+        *)
+            echo "您选择了: $fruit"
+            ;;
+    esac
+done
+~~~
+
+### 循环控制
+
+#### for
+
+~~~ shell
+for 变量 in 列表; do
+	# 循环体
+done
+~~~
+
+#### while
+
+~~~ shell
+while [ 条件 ]; do
+	# 循环体
+done
+~~~
+
+#### until
+
+~~~ shell
+until [ 条件 ]; do
+	# 循环体
+done
+~~~
+
+#### 循环控制命令
+
+* break：跳出当前循环
+* continue：跳过当前循环，进入下次循环
 
