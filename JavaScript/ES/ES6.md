@@ -130,7 +130,7 @@ function add(a,b,c=10){
 }
 ~~~
 
-与结构赋值结合使用
+与解构赋值结合使用
 
 ~~~ js
 function connect({ host=“127.0.0.1”,username,password,port}){
